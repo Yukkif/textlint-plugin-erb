@@ -1,5 +1,3 @@
-"use strict";
-
 import { parse } from "textlint-plugin-html/lib/html-to-ast";
 
 export default class ErbProcessor {
