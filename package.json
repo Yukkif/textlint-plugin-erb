@@ -6,12 +6,11 @@
   "author": "Mikami, Takeshi <takeshi.mikami@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prepare": "npm run build",
     "build": "babel src --out-dir lib --source-maps",
-    "watch": "babel src --out-dir lib --source-maps --watch",
-    "postinstall": "postinstall-build lib \"npm run build\""
+    "watch": "babel src --out-dir lib --source-maps --watch"
   },
   "dependencies": {
-    "postinstall-build": "^5.0.1",
     "textlint-plugin-html": "^1.0.0"
   },
   "devDependencies": {
