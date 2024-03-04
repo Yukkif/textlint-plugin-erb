@@ -6,20 +6,19 @@
   "author": "Mikami, Takeshi <takeshi.mikami@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel -s -d lib src",
-    "test": "mocha",
-    "watch": "babel -w -s -d lib src",
+    "build": "babel src --out-dir lib --source-maps",
+    "watch": "babel src --out-dir lib --source-maps --watch",
     "postinstall": "postinstall-build lib \"npm run build\""
   },
   "dependencies": {
     "postinstall-build": "^5.0.1",
-    "textlint-plugin-html": "^0.1.7"
+    "textlint-plugin-html": "^1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.23.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
+    "@babel/preset-env": "^7.24.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.24.1",
-    "mocha": "^4.0.1",
     "power-assert": "^1.4.4",
     "textlint-ast-test": "^2.0.1"
   }
